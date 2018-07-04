@@ -1,0 +1,28 @@
+﻿@* Model = guarda el modelo que es una lista de tipo del modelo student*@
+@model List<DemoMvc.Models.Student>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Semestre</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Name</td>
+                <td>@student.Semester </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
